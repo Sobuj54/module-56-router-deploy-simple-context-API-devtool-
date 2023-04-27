@@ -1,4 +1,5 @@
 import React from "react";
+import "./Cart.css";
 
 const Cart = ({ cart, handleRemoveFromCart }) => {
   // conditional rendering
@@ -15,7 +16,15 @@ const Cart = ({ cart, handleRemoveFromCart }) => {
 
   return (
     <div>
-      <h3>order summary : {cart.length}</h3>
+      {/* conditional css class */}
+      <h3 className={cart.length === 2 ? "green" : "purple"}>
+        order summary : {cart.length}
+      </h3>
+
+      {/* conditional css class with a common class */}
+      <p className={`bold ${cart.length === 4 ? "yellow" : "blue"}`}>
+        conditional common css class
+      </p>
 
       {/* 2. conditional rendering using ternary operator */}
       {cart.length > 2 ? <p>valoi kinsen</p> : <p>fokira</p>}

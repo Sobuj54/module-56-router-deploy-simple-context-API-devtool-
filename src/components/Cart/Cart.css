@@ -1,0 +1,26 @@
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+    color: white;
+}
+
+.blue {
+    background-color: blue;
+    color: white;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.purple {
+    background-color: purple;
+    color: white;
+}
+
+.bold {
+    font-weight: bold;
+}
