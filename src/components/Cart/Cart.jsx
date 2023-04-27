@@ -16,6 +16,8 @@ const Cart = ({ cart, handleRemoveFromCart }) => {
   return (
     <div>
       <h3>order summary : {cart.length}</h3>
+      {/* conditional rendering using ternary operator */}
+      {cart.length > 2 ? <p>valoi kinsen</p> : <p>fokira</p>}
       {/* this message is the result of conditional rendering */}
       {message}
       {cart.map((tshirt) => (
