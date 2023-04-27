@@ -17,10 +17,10 @@ const Cart = ({ cart, handleRemoveFromCart }) => {
     <div>
       <h3>order summary : {cart.length}</h3>
 
-      {/* conditional rendering using ternary operator */}
+      {/* 2. conditional rendering using ternary operator */}
       {cart.length > 2 ? <p>valoi kinsen</p> : <p>fokira</p>}
 
-      {/* this message is the result of conditional rendering */}
+      {/* 1. this message is the result of conditional rendering */}
       {message}
 
       {cart.map((tshirt) => (
@@ -30,9 +30,21 @@ const Cart = ({ cart, handleRemoveFromCart }) => {
         </p>
       ))}
 
+      {/*3. conditional rendering using && operator */}
       {cart.length === 2 && <h5>double buy!!</h5>}
+
+      {/* 4. conditional rendering using || operator */}
+      {cart.length === 3 || <h5>tin ta to hoilo na</h5>}
     </div>
   );
 };
 
 export default Cart;
+
+/*
+*CONDITIONAL RENDERING  
+1.use if else to set a variable that will contain an element, components
+2. ternary operator : condition ? 'for true' : 'false'
+3. Logical && : (if the condition is true the next thing will be displayed)
+4. Logical || : (if the condition is false then the next thing will be displayed)
+*/
